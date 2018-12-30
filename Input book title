@@ -1,0 +1,27 @@
+# [ ] Get input for a book title, keep looping while input is Not in title format (title is every word capitalized)
+
+title = "THE"
+search = ""
+
+while True:
+    
+    if title.isalpha():
+        
+        search = input("Enter the book title using capitalized words: ")
+        
+        if search.istitle():
+            
+            print("Remember to enter the book title using capitalized words:")
+            
+        else:
+            
+            if search.startswith("THE DAO OF CAPITALISM"):
+                
+                print("Got it!")
+                break
+                
+            else:
+                print("Try again!")
+    
+    else:
+        pass

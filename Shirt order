@@ -1,0 +1,84 @@
+#First get input for color and size
+
+#White has sizes L, M
+#Blue has sizes M, S
+#print avaiable or unavailable, then
+#print the order confirmation of color and size
+
+#* hint: set a variable "available = False" before nested if statements and
+#change to True if color and size are avaiable*
+
+# [ ] create shirt order using nested if 
+
+#white_shirt = ("M,L")
+#blue_shirt = ("S,M")
+
+shirt_size = ""
+shirt_color = ("a")
+white_shirt = 0
+blue_shirt = 0
+
+while shirt_color.isalpha() == True:
+        
+    shirt_color = input("Enter the shirt color: ")
+    
+    if shirt_color.startswith("exit") == False:
+    
+        if shirt_color.startswith("white"):
+             
+            shirt_size = input("Enter the shirt size 'M/L': ")
+                
+            if shirt_size.title().startswith("M"):
+                
+                shirt_qtd = input ("Enter the size QTD using digits only: ")
+                
+                if shirt_qtd.isdigit():
+                    white_shirt_m = shirt_size.upper(),shirt_qtd
+
+                else:
+                    print("Please enter ONLY digits!")
+        
+            elif shirt_size.title().startswith("L"):
+            
+                shirt_qtd = input ("Enter the size QTD using digits only: ")
+                
+                if shirt_qtd.isdigit():
+                    white_shirt_l = shirt_size.upper(),shirt_qtd
+
+                else:
+                    print("Please enter ONLY digits!")
+            
+            else:
+                print('"Size not available"')
+        
+        if shirt_color.startswith("blue"):
+                              
+            shirt_size = input("Enter the shirt size 'S/M': ")
+    
+            if shirt_size.title().startswith("S"):
+            
+                shirt_qtd = input ("Enter the size QTD using digits only: ")
+                
+                if shirt_qtd.isdigit():
+                    blue_shirt_s = shirt_size.upper(),shirt_qtd
+
+                else:
+                    print("Please enter ONLY digits!")
+                        
+            elif shirt_size.title().startswith("M"):
+            
+                shirt_qtd = input ("Enter the size QTD using digits only: ")
+                
+                if shirt_qtd.isdigit():
+                    blue_shirt_m = shirt_size.upper(),shirt_qtd
+
+                else:
+                    print("Please enter ONLY digits!")
+              
+            else:
+                print('"Size not available"')
+            
+    else:
+        print("\Exiting the program!")
+        print("Order sumary:","\nWhite shirt:\t",white_shirt_m,"\nWhite shirt:\t",white_shirt_l,"\nBlue shirt:\t",blue_shirt_s,"\nBlue shirt:\t",blue_shirt_m)
+        shirt_color = ("")

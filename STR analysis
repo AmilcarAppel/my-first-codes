@@ -1,0 +1,21 @@
+String Analysis function
+
+def str_analysis():
+    
+    analysis = input("Enter something: ")
+    
+    if analysis.isdigit():
+                
+        if int(analysis) > 99:
+            print("This is such a big number!!!")
+            
+        else:
+            print("This is not so big!!!")
+            
+    elif analysis.isalpha():
+        print("Thanks for entering all alpha characters")
+        
+    else:
+        print("Well it looks like nor all alpha either digits")
+        
+str_analysis()

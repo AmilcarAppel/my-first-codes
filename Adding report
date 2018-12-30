@@ -1,0 +1,32 @@
+# [ ] create, call and test the adding_report() function
+
+def adding_report(): 
+
+    total = 0
+    total_str = ""
+    while True:
+        
+        items = input("Enter an integer or Q to quit: ")
+        
+        if items.isdigit():
+            total = int(total) + int(items)
+            total_str = total_str + items
+            
+        elif items.upper().startswith("Q"):
+            report = input("\nDo you wish to report the items? Enter 'A' for yes or 'T' for total: ")
+            
+            if report.upper().startswith("A"):             
+                print("\nItems:",total_str,"\n\nTotal:",total)
+                break
+                
+            elif report.upper().startswith("T"):             
+                print("\nTotal:",total)
+                break
+            
+            else:
+                pass
+                
+        else:
+            print("\nInvalid input!")
+        
+adding_report()

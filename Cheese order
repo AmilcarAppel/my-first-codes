@@ -1,0 +1,20 @@
+# CHEESE ORDER PROGRAM:
+
+def cheese_order():
+
+    order_amount = float(input("Please enter the cheese amount you'd like to have: "))
+    
+    kg_price = "15.5"
+    result = order_amount * float(kg_price)
+       
+    if order_amount > 100:
+        print(order_amount,"is over the maximum weigth")
+        
+    elif order_amount < 1:
+        print(order_amount,"is under the minimum weigth")
+        
+    else:
+        print("$",float(result),"is the cost of",order_amount,"kg of cheese.")
+    
+        
+cheese_order()

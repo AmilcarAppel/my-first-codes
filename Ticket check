@@ -1,0 +1,61 @@
+#section is a string and expects: general, floor
+#seats is an integer and expects: 1 - 10
+#Check for valid section and seats
+
+#if section is general (or use startswith "g")
+#if seats is 1-10 return True
+#if section is floor (or use starts with "f")
+#if seats is 1-4 return True
+#otherwise return False
+
+section = "" 
+
+
+def check_ticket():
+    
+    section = input("Enter general or floor section: ")
+    
+    if section.startswith("g") == True:
+        
+        g_seats = input("Enter which seat you wish between 1 to 10: ")
+        
+        if int(g_seats) >= 1:
+            
+            if int(g_seats) <= 10:
+                  
+                return True
+        
+            else:
+                print("Enter seats between 1 - 10")
+                return False
+            
+        else:
+            
+            print("Enter seats between 1 - 10")
+            return False
+        
+    elif section.startswith("f") == True:
+        
+        f_seats = input("Enter which seat you wish between 1 to 4: ")
+        
+        if int(f_seats) >= 1:
+            
+            if int(f_seats) <= 4:
+            
+                return True
+        
+            else:
+                print("Enter seats between 1 - 4")
+                return False
+        
+        else:
+                        
+            print("Enter seats between 1 - 4")
+            return False
+        
+    else:
+        print("Enter g-general or f-floor ")
+        
+
+check_ticket()
+        

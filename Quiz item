@@ -1,0 +1,39 @@
+#quiz_item()has 2 parameter strings: question and solution
+#shows question, gets answer input
+#returns True if answer == solution or continues to ask question until correct answer is provided
+#use a while loop
+#create 2 or more quiz questions that call quiz_item()
+#Hint: provide multiple choice or T/F answers
+
+# Create quiz_item() and 2 or more quiz questions that call quiz_item()
+
+solution = "true"
+solution_2 = "false"
+
+
+def quiz_item():
+    
+    while True:
+        
+        answer = input("The capital of Santa Catarina State is Florianopolis? Answer true or false: ")
+    
+       
+        if answer == solution:
+            print("\nCorrect!\n\nLet\'s try another one")
+            
+            answer_2 = input("\nAmerica is located in the south hemisphere? Answer true or false: ")
+                        
+            if answer_2 == solution_2:
+                print("\nYou got it!")
+                break
+                
+            else:
+                print("\nLet\'s try again")
+                       
+        else:
+            print("\nKeep trying!")
+                
+        
+quiz_item()    
+        
+           
